@@ -1,0 +1,10 @@
+{
+  "name": "tech-communicator",
+  "version": "1.0.0",
+  "description": "Tools for gathering and translating requirements to non technical stakeholders",
+  "author": {
+    "name": "Paul Meloche",
+    "email": "paul.meloche@thepioneerteam.com"
+  },
+  "skills": ["./skills/md-to-pdf"]
+}
