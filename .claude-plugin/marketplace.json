@@ -9,9 +9,103 @@
       "name": "tech-communicator",
       "source": "./plugins/tech-communicator",
       "description": "Tools for gathering and translating requirements to non technical stakeholders",
-      "version": "1.0",
       "author": {
         "name": "Paul Meloche"
+      }
+    },
+    {
+      "name": "frontend-design",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/frontend-design"
+      },
+      "description": "Frontend design skill for UI/UX implementation",
+      "author": {
+        "name": "By Anthropic, curated for Pioneer"
+      }
+    },
+    {
+      "name": "context7",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/upstash/context7.git",
+        "path": "plugins/claude/context7"
+      },
+      "description": "Upstash Context7 MCP server for up-to-date documentation lookup. Pull version-specific documentation and code examples directly from source repositories into your LLM context.",
+      "author": {
+        "name": "Upstash"
+      }
+    },
+    {
+      "name": "claude-md-management",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/claude-md-management"
+      },
+      "description": "Tools to maintain and improve CLAUDE.md files - audit quality, capture session learnings, and keep project memory current.",
+      "author": {
+        "name": "By Anthropic, curated for Pioneer"
+      }
+    },
+    {
+      "name": "feature-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/feature-dev"
+      },
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "author": {
+        "name": "By Anthropic, curated for Pioneer"
+      }
+    },
+    {
+      "name": "security-guidance",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/security-guidance"
+      },
+      "description": "Security review for Claude-generated code. Pattern-based warnings on edits, LLM-powered diff review on Stop, and an agentic commit reviewer that catches injection, XSS, SSRF, hardcoded secrets, and 25+ other vulnerability classes.",
+      "author": {
+        "name": "David Dworken"
+      }
+    },
+    {
+      "name": "supabase",
+      "source": {
+        "source": "github",
+        "repo": "supabase-community/supabase-plugin"
+      },
+      "description": "Official Supabase plugin for Claude Code with bundled Supabase skills and MCP access for project management, database work, auth, storage, and Postgres best practices.",
+      "author": {
+        "name": "Supabase Community"
+      }
+    },
+    {
+      "name": "mcp-server-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/mcp-server-dev"
+      },
+      "description": "Skills for designing and building MCP servers that work seamlessly with Claude — guides you through deployment models (remote HTTP, MCPB, local), tool design patterns, auth, and interactive MCP apps.",
+      "author": {
+        "name": "By Anthropic, curated for Pioneer"
+      }
+    },
+    {
+      "name": "typescript-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/typescript-lsp"
+      },
+      "description": "TypeScript/JavaScript language server for Claude Code, providing code intelligence features like go-to-definition, find references, and error checking.",
+      "author": {
+        "name": "By Anthropic, curated for Pioneer"
       }
     }
   ]
