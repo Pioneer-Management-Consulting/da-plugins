@@ -14,6 +14,14 @@
       }
     },
     {
+      "name": "the-exterminator",
+      "source": "./plugins/the-exterminator",
+      "description": "Systematic, full-stack bug-finder that takes a specific issue and critically explores potential causes and downstream dependencies to implement a robust fix.",
+      "author": {
+        "name": "AJ Perron"
+      }
+    },
+    {
       "name": "frontend-design",
       "source": {
         "source": "git-subdir",
