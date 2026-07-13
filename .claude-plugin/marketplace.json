@@ -31,8 +31,9 @@
       "description": "Frontend design skill for UI/UX implementation",
       "author": {
         "name": "By Anthropic, curated for Pioneer"
-      },
-      {
+      }
+    },
+    {
       "name": "skill-creator",
       "source": {
         "source": "git-subdir",
