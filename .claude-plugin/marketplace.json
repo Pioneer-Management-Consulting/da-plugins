@@ -42,7 +42,9 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/anthropics/claude-plugins-official.git",
-        "path": "plugins/claude-md-management"
+        "path": "plugins/claude-md-management",
+        "skills": ["./skills/"],
+        "commands": ["./commands/"]
       },
       "description": "Tools to maintain and improve CLAUDE.md files - audit quality, capture session learnings, and keep project memory current.",
       "author": {

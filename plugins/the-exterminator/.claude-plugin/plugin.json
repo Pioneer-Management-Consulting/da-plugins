@@ -1,0 +1,10 @@
+{
+  "name": "the-exterminator",
+  "version": "1.0.0",
+  "description": "Systematic, full-stack bug-finder that takes a specific issue and critically explores potential causes and downstream dependencies to implement a robust fix.",
+  "author": {
+    "name": "AJ Perron",
+    "email": "aj.perron@thepioneerteam.com"
+  },
+  "skills": ["./skills/the-exterminator"]
+}
