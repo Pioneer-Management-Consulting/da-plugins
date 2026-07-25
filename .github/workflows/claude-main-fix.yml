@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
+# pioneer-stub-version: 1
+# source: stubs/claude-main-fix.yml
+# purpose: When any workflow fails on the default branch, Claude opens a PR with a fix
+#
+# DO NOT EDIT IN THIS REPOSITORY. Local edits are detected and reported as
+# DIVERGED, and this repo then stops receiving updates.
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# `workflow_run` fires only for the copy of this file on the DEFAULT BRANCH, and
+# always runs that copy - so a pull request can never change its own behaviour.
+#
+# `workflows:` is deliberately omitted, which we take to mean "any workflow".
+# GitHub does not document this; see Step 7a of docs/SETUP.md.
+name: Claude Main Failure Fix
+
+on:
+  workflow_run:
+    types: [completed]
+    # FALLBACK - only if the Step 7a probe in docs/SETUP.md fails. This list must
+    # then be updated by hand whenever a CI workflow is added or renamed here.
+    workflows: ["Deploy Production, Probe A"]
+
+jobs:
+  fix:
+    name: Claude Main Failure Fix
+    # `id-token: write` MUST be declared here in the caller.
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: read
+      id-token: write
+    uses: Pioneer-Management-Consulting/github-claude-automations/.github/workflows/main-failure-fix.yml@v1
+    secrets: inherit

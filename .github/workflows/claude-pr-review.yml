@@ -1,0 +1,61 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
+# pioneer-stub-version: 1
+# source: stubs/claude-pr-review.yml
+# purpose: Two advisory Claude reviews on every new PR - security, and logic/business rules
+#
+# DO NOT EDIT IN THIS REPOSITORY. Local edits are detected and reported as
+# DIVERGED, and this repo then stops receiving updates. To change behaviour,
+# edit the central repo above.
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# The `name:` below MUST keep its "Claude " prefix. The default-branch fix
+# workflow skips any failing workflow whose name starts with "Claude ", which is
+# what stops these reviews from triggering an autofix.
+name: Claude PR Review
+
+on:
+  pull_request:
+    types: [opened, reopened]
+    # COST LEVER (off by decision) - only review when code actually changed:
+    # paths:
+    #   - "**/*.ts"
+    #   - "**/*.tsx"
+    #   - "**/*.js"
+    #   - "**/*.jsx"
+    #   - "**/*.py"
+    #   - "**/*.sql"
+    #   - "**/*.tf"
+
+# COST LEVER (off by decision):
+# concurrency:
+#   group: claude-pr-review-${{ github.event.pull_request.number }}
+#   cancel-in-progress: true
+
+jobs:
+  security:
+    name: Claude Security Review
+    # Skips the sync bot's own PRs. Without this, merging the rollout PR that
+    # ADDS this file causes it to review that very PR across every repo at once.
+    # Verify the exact login on the first sync PR and correct it if it differs.
+    if: github.event.pull_request.user.login != 'pioneer-automations[bot]'
+    # `id-token: write` MUST be declared here in the caller. A called workflow
+    # can never hold more permission than the workflow that called it.
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write        # a top-level PR comment is an issue comment
+      id-token: write
+    uses: Pioneer-Management-Consulting/github-claude-automations/.github/workflows/pr-review-security.yml@v1
+    secrets: inherit
+
+  logic:
+    name: Claude Logic Review
+    if: github.event.pull_request.user.login != 'pioneer-automations[bot]'
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    uses: Pioneer-Management-Consulting/github-claude-automations/.github/workflows/pr-review-logic.yml@v1
+    secrets: inherit
