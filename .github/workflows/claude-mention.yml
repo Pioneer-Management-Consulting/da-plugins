@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
+# pioneer-stub-version: 1
+# source: stubs/claude-mention.yml
+# purpose: Responds when someone writes @claude in a PR comment, review, or issue
+#
+# DO NOT EDIT IN THIS REPOSITORY. Local edits are detected and reported as
+# DIVERGED, and this repo then stops receiving updates.
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Keep the "Claude " prefix on `name:` - the default-branch fix workflow relies
+# on it to avoid reacting to our own workflows.
+name: Claude Mention
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+  issues:
+    types: [opened, assigned]
+
+jobs:
+  mention:
+    name: Claude Mention
+    # `id-token: write` MUST be declared here in the caller.
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: read
+      id-token: write
+    uses: Pioneer-Management-Consulting/github-claude-automations/.github/workflows/claude-mention.yml@v1
+    secrets: inherit
