@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
-# pioneer-stub-version: 1
+# pioneer-stub-version: 2
 # source: stubs/claude-mention.yml
 # purpose: Responds when someone writes @claude in a PR comment, review, or issue
 #
