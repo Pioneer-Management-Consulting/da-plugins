@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
-# pioneer-stub-version: 1
+# pioneer-stub-version: 2
 # source: stubs/claude-pr-review.yml
 # purpose: Two advisory Claude reviews on every new PR - security, and logic/business rules
 #
@@ -35,10 +35,13 @@ on:
 jobs:
   security:
     name: Claude Security Review
-    # Skips the sync bot's own PRs. Without this, merging the rollout PR that
-    # ADDS this file causes it to review that very PR across every repo at once.
-    # Verify the exact login on the first sync PR and correct it if it differs.
-    if: github.event.pull_request.user.login != 'pioneer-automations[bot]'
+    # Skips the sync bot's own PRs (merging the rollout PR that ADDS this file
+    # would otherwise cause it to review that very PR across every repo at once)
+    # and skips claude[bot]'s own fix PRs (see main-failure-fix.yml) - those are
+    # already produced by Claude and don't need a second Claude reviewing them.
+    if: >-
+      github.event.pull_request.user.login != 'pioneer-automations[bot]' &&
+      github.event.pull_request.user.login != 'claude[bot]'
     # `id-token: write` MUST be declared here in the caller. A called workflow
     # can never hold more permission than the workflow that called it.
     permissions:
@@ -51,7 +54,9 @@ jobs:
 
   logic:
     name: Claude Logic Review
-    if: github.event.pull_request.user.login != 'pioneer-automations[bot]'
+    if: >-
+      github.event.pull_request.user.login != 'pioneer-automations[bot]' &&
+      github.event.pull_request.user.login != 'claude[bot]'
     permissions:
       contents: read
       pull-requests: write
