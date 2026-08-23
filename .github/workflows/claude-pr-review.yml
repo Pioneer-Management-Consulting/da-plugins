@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # MANAGED-BY: Pioneer-Management-Consulting/github-claude-automations
-# pioneer-stub-version: 2
+# pioneer-stub-version: 3
 # source: stubs/claude-pr-review.yml
 # purpose: Two advisory Claude reviews on every new PR - security, and logic/business rules
 #
