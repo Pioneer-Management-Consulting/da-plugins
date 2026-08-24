@@ -97,10 +97,7 @@
     },
     {
       "name": "supabase",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/supabase-community/supabase-plugin.git"
-      },
+      "source": "./plugins/supabase",
       "description": "Official Supabase plugin for Claude Code with bundled Supabase skills and MCP access for project management, database work, auth, storage, and Postgres best practices.",
       "author": {
         "name": "Supabase Community"
