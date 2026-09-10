@@ -117,14 +117,18 @@
     },
     {
       "name": "typescript-lsp",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/anthropics/claude-plugins-official.git",
-        "path": "plugins/typescript-lsp"
-      },
+      "source": "./plugins/typescript-lsp",
       "description": "TypeScript/JavaScript language server for Claude Code, providing code intelligence features like go-to-definition, find references, and error checking.",
       "author": {
-        "name": "By Anthropic, curated for Pioneer"
+        "name": "Unofficial, curated for Pioneer"
+      }
+    },
+    {
+      "name": "pyright-lsp",
+      "source": "./plugins/pyright-lsp",
+      "description": "Python language server (Pyright) for Claude Code, providing static type checking and code intelligence.",
+      "author": {
+        "name": "Microsoft, curated for Pioneer"
       }
     }
   ]
