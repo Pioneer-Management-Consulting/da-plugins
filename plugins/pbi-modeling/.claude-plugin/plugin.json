@@ -1,0 +1,7 @@
+{
+  "name": "pbi-modeling",
+  "displayName": "pbi-modeling",
+  "description": "Tools to explore and develop on semantic models within accessible Fabric workspaces or with local .pbip files.",
+  "author": { "name": "Pioneer Management Consulting", "email": "aperron@thepioneerteam.com" },
+  "keywords": ["fabric", "semantic models", "reporting", "powerbi"]
+}

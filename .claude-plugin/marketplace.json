@@ -124,6 +124,22 @@
       }
     },
     {
+      "name": "pbi-modeling",
+      "source": "./plugins/pbi-modeling",
+      "description": "Tools to explore and develop on semantic models within accessible Fabric workspaces or with local .pbip files.",
+      "author": {
+        "name": "AJ Perron"
+      }
+    },
+    {
+      "name": "table-talk",
+      "source": "./plugins/table-talk",
+      "description": "Read-only tools to explore and query a SQL Server or Fabric Lakehouse SQL endpoint. Set the connection per project.",
+      "author": {
+        "name": "AJ Perron"
+      }
+    },
+    {
       "name": "pyright-lsp",
       "source": "./plugins/pyright-lsp",
       "description": "Python language server (Pyright) for Claude Code, providing static type checking and code intelligence.",

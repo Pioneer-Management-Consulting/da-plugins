@@ -1,0 +1,7 @@
+{
+  "name": "table-talk",
+  "displayName": "Table Talk",
+  "description": "Read-only tools to explore and query a SQL Server or Fabric Lakehouse SQL endpoint. Set the connection per project.",
+  "author": { "name": "AJ Perron", "email": "aj.perron@thepioneerteam.com" },
+  "keywords": ["database", "sql server", "fabric", "lakehouse", "sql", "data"]
+}
