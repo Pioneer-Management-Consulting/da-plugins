@@ -1,0 +1,9 @@
+{
+  "name": "haiku-max",
+  "description": "Applies Claude Haiku 5.5 best practices automatically whenever Haiku is the running model or a delegated subagent.",
+  "author": {
+    "name": "AJ Perron",
+    "email": "aj.perron@thepioneerteam.com"
+  },
+  "skills": ["./skills/haiku-max"]
+}

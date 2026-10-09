@@ -146,6 +146,14 @@
       "author": {
         "name": "Microsoft, curated for Pioneer"
       }
+    },
+    {
+      "name": "haiku-max",
+      "source": "./plugins/haiku-max",
+      "description": "Applies Claude Haiku 5.5 best practices automatically whenever Haiku is the running model or a delegated subagent. Covers Claude Code and Desktop.",
+      "author": {
+        "name": "AJ Perron"
+      }
     }
   ]
 }
