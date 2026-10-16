@@ -154,6 +154,14 @@
       "author": {
         "name": "AJ Perron"
       }
+    },
+    {
+      "name": "adhd",
+      "source": "./plugins/adhd",
+      "description": "Shape verbose and convoluted Claude output: lead with the next action, number steps, suppress tangents, give specific time estimates, make wins visible.",
+      "author": {
+        "name": "a modified version of 'i-have-adhd' from ayghri on Github"
+      }
     }
   ]
 }

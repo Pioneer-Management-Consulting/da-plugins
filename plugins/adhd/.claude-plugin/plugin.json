@@ -1,0 +1,9 @@
+{
+  "name": "adhd",
+  "description": "Shape verbose and convoluted Claude output: lead with the next action, number steps, suppress tangents, give specific time estimates, make wins visible.",
+  "author": {
+    "name": "AJ Perron",
+    "email": "aj.perron@thepioneerteam.com"
+  },
+  "skills": ["./skills/adhd"]
+}
