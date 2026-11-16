@@ -12,5 +12,7 @@ tech-communicator-
 │   └── plugin.json          # plugin manifest
 └── skills/
     └── md-to-pdf/
-        └── SKILL.md          # example of skill directory
+        └── SKILL.md
+    └── test-checklist/
+        └── SKILL.md              # example of skill directory
 ```

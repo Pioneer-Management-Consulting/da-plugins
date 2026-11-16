@@ -8,7 +8,7 @@
     {
       "name": "tech-communicator",
       "source": "./plugins/tech-communicator",
-      "description": "Tools for gathering and translating requirements to non technical stakeholders",
+      "description": "Tools for gathering and translating requirements and procedures to non technical stakeholders or testers",
       "author": {
         "name": "Paul Meloche"
       }
