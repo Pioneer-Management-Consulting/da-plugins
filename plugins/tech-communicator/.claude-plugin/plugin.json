@@ -1,9 +1,9 @@
 {
   "name": "tech-communicator",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Tools for gathering and translating requirements to non technical stakeholders",
   "author": {
-    "name": "Paul Meloche",
+    "name": "Paul Meloche, AJ Perron",
     "email": "paul.meloche@thepioneerteam.com"
   },
   "skills": ["./skills/"]

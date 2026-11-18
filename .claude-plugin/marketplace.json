@@ -10,7 +10,7 @@
       "source": "./plugins/tech-communicator",
       "description": "Tools for gathering and translating requirements and procedures to non technical stakeholders or testers",
       "author": {
-        "name": "Paul Meloche"
+        "name": "Paul Meloche, AJ Perron"
       }
     },
     {
